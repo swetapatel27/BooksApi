@@ -4,7 +4,7 @@ const route = require('./route');
 
 
 //connect to mongdb
-mongoose.connect("mongodb+srv://rkuuser:rku@12345@mycluster.jtfqi.mongodb.net/Student?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology: true}).then(
+mongoose.connect("mongodb://localhost:27017/books",{useNewUrlParser:true,useUnifiedTopology: true}).then(
     ()=>{
         const app = express();
         app.use("/api",route);
